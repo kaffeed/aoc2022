@@ -23,16 +23,24 @@ fn get_maximum_calories(input: Vec<i32>) -> Option<i32> {
     input.iter().max().copied()
 }
 
-pub fn day_one_p1(input: &str) {
-    let input = transform_input(&read_file_to_string(input));
-    println!("Max value: {:#?}", get_maximum_calories(input));
+pub mod part_one {
+    use super::*;
+
+    pub fn run(input: &str) {
+        let input = transform_input(&read_file_to_string(input));
+        println!("Max value: {:#?}", get_maximum_calories(input));
+    }
 }
 
-pub fn day_one_p2(input: &str) {
-    let mut input = transform_input(&read_file_to_string(input));
-    input.sort();
-    input.reverse();
-    println!("{:#?}", (&input[..3]).iter().sum::<i32>());
+pub mod part_two {
+    use super::*;
+
+    pub fn run(input: &str) {
+        let mut input = transform_input(&read_file_to_string(input));
+        input.sort();
+        input.reverse();
+        println!("{:#?}", (&input[..3]).iter().sum::<i32>());
+    }
 }
 
 #[cfg(test)]
