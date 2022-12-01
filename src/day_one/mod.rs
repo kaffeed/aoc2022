@@ -28,7 +28,7 @@ pub mod part_one {
 
     pub fn run(input: &str) {
         let input = transform_input(&read_file_to_string(input));
-        println!("Max value: {:#?}", get_maximum_calories(input));
+        println!("Output day_one part one:\t{}", get_maximum_calories(input).unwrap());
     }
 }
 
@@ -39,7 +39,7 @@ pub mod part_two {
         let mut input = transform_input(&read_file_to_string(input));
         input.sort();
         input.reverse();
-        println!("{:#?}", (&input[..3]).iter().sum::<i32>());
+        println!("Output day_one part two:\t{}", (&input[..3]).iter().sum::<i32>());
     }
 }
 
