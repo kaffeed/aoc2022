@@ -1,5 +1,8 @@
 use std::fs;
 
+pub mod part_one;
+pub mod part_two;
+
 fn read_file_to_string(input: &str) -> String {
     fs::read_to_string(input).expect("The input file should exist!")
 }
@@ -23,25 +26,6 @@ fn get_maximum_calories(input: Vec<i32>) -> Option<i32> {
     input.iter().max().copied()
 }
 
-pub mod part_one {
-    use super::*;
-
-    pub fn run(input: &str) {
-        let input = transform_input(&read_file_to_string(input));
-        println!("Output day_one part one:\t{}", get_maximum_calories(input).unwrap());
-    }
-}
-
-pub mod part_two {
-    use super::*;
-
-    pub fn run(input: &str) {
-        let mut input = transform_input(&read_file_to_string(input));
-        input.sort();
-        input.reverse();
-        println!("Output day_one part two:\t{}", (&input[..3]).iter().sum::<i32>());
-    }
-}
 
 #[cfg(test)]
 mod tests {
