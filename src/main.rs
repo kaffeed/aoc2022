@@ -1,3 +1,4 @@
+mod day_five;
 mod day_four;
 mod day_one;
 mod day_three;
@@ -12,4 +13,6 @@ fn main() {
     day_three::part_two::run("inputs/day_three.txt");
     day_four::part_one::run("inputs/day_four.txt");
     day_four::part_two::run("inputs/day_four.txt");
+    day_five::part_one::run("inputs/day_five.txt");
+    day_five::part_two::run("inputs/day_five.txt");
 }

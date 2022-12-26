@@ -1,4 +1,4 @@
-use std::{fs};
+use std::fs;
 
 pub mod part_one;
 pub mod part_two;
