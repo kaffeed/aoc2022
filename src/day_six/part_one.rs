@@ -6,4 +6,3 @@ pub fn run(file_name: &str) {
         run_internal(file_name, 4).unwrap()
     );
 }
-
